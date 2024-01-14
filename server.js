@@ -8,6 +8,8 @@ const dotenv = require('dotenv');
 
 dotenv.config({path: './data/config.env'});
 
+console.log(`https://${process.env.MAILCHIMP_SERVER}.api.mailchimp.com/3.0/lists/${process.env.MAILCHIMP_LIST}`)
+
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -38,15 +40,6 @@ app.post('/subscribe', (req, res) => {
     }
 
     const mcDataPost = JSON.stringify(mcData);
-
-    // const options = {
-    //     url: 'https://us21.api.mailchimp.com/3.0/lists/1aca4c8001',
-    //     method: 'POST',
-    //     headers: {
-    //         Authorization: 'auth fed545570e08b2af3805311614f0d754-us21'
-    //     },
-    //     body: mcDataPost
-    // }
 
     const options = {
         url: `https://${process.env.MAILCHIMP_SERVER}.api.mailchimp.com/3.0/lists/${process.env.MAILCHIMP_LIST}`,
