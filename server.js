@@ -43,7 +43,7 @@ app.post('/subscribe', (req, res) => {
     //     url: 'https://us21.api.mailchimp.com/3.0/lists/1aca4c8001',
     //     method: 'POST',
     //     headers: {
-    //         Authorization: 'auth 810b3a404e714ca98410278066b6c509-us21'
+    //         Authorization: 'auth fed545570e08b2af3805311614f0d754-us21'
     //     },
     //     body: mcDataPost
     // }
