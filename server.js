@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors({
     origin: [
         'http://localhost:3000',
-        'http://127.0.0.1',
+        'http://127.0.0.1:5173',
         'https://newsletter-frontend-l3xs.onrender.com',
         'https://ashmitshahi.com'
       ],  
@@ -73,6 +73,8 @@ app.post('/subscribe', (req, res) => {
     } else {
         res.status(404).json({ success: false, message: 'Failed' })
     }
+
+    console.log(email)
 })
 
 
